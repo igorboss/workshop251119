@@ -22,6 +22,7 @@ publisher:
 
 dependencies:
   hl7.fhir.eu.base-r5: 0.1.0
+  lt.hl7.fhir.base: 0.2.0
 #  hl7.fhir.uv.ips.r5: 4.0.0  #FHIR IPS R5 base
 #   fhir.base.template: 0.8.1
 #   # while we don't strictly needs this, this helps resolve the DICOM supplement correctly until tx.fhir.org can do this

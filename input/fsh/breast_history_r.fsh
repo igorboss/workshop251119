@@ -1,7 +1,7 @@
 Alias: $sct = http://snomed.info/sct
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 
-ValueSet: BreastQuadrantVs
+ValueSet: BreastQuadrantVS
 Id: lt-breast-quadrant-vs
 Title: "Breast Quadrant Value Set"
 Description: "Breast quadrant"
@@ -29,16 +29,16 @@ Description: "Breast side"
 * $sct#80248007 "Left Breast Structure (body structure)"
 * $sct#73056007 "Rigth Breast Structure (body structure)"
 
-ValueSet: YesNo
-Id: yes-no
-Title: "Yes-No options"
-Description: "Selection Yes or No."
-* ^status = #active
-* ^experimental = false
-* ^language = #en
-* ^publisher = "HL7 Lithuania"
-* $sct#373067005 "No (qualifier value)"
-* $sct#373066001 "Yes (qualifier value)"
+// ValueSet: YesNo
+// Id: yes-no
+// Title: "Yes-No options"
+// Description: "Selection Yes or No."
+// * ^status = #active
+// * ^experimental = false
+// * ^language = #en
+// * ^publisher = "HL7 Lithuania"
+// * $sct#373067005 "No (qualifier value)"
+// * $sct#373066001 "Yes (qualifier value)"
 
 Profile: LTBreastHistoryBase
 Parent: LTBaseObservation
@@ -82,7 +82,7 @@ Description: "This profile constrains the Observation resource to represent an o
 * component[Quadrant].code = $sct#272670002 "Structure of breast quadrant (body structure)"
 * component[Quadrant].value[x] only CodeableConcept
 * component[Quadrant].valueCodeableConcept 1..1
-* component[Quadrant].valueCodeableConcept from BreastQuadrantVs (required)
+* component[Quadrant].valueCodeableConcept from BreastQuadrantVS (required)
 * component[Quadrant] ^short = "Breast quadrant where surgery was performed"
 
 
@@ -165,6 +165,12 @@ Title: "Example – Breast Injury History"
 Description: "Patient has a history of contusion of the left lower inner quadrant."
 * status = #final
 * valueCodeableConcept = $sct#373067005 "No (qualifier value)"
+
+* component[Side].code = $sct#76752008 "Breast structure (body structure)"
+* component[Side].valueCodeableConcept = $sct#73056007 "Right Breast Structure (body structure)"
+
+* component[Quadrant].code = $sct#272670002 "Structure of breast quadrant (body structure)"
+* component[Quadrant].valueCodeableConcept = $sct#33564002 "Structure of lower outer quadrant of breast (body structure)"
 
 // Example for LTBreastDiseaseHistory
 Instance: ExampleBreastDiseaseHistory

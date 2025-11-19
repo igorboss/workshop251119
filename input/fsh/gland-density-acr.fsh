@@ -43,7 +43,7 @@ Description: "Gland density observation according to ACR BI-RADS classification.
 
 // Category and code
 * category = $observation-category#social-history "Social History"
-* code = $sct#733851004 "Breast consistency (observable entity)"
+* code = $sct#733851004 "Breast consistency (observable entity)" 
 
 // Subject and timing
 * subject 1..
@@ -77,7 +77,7 @@ Title: "Example of Breast Density – Fatty"
 Description: "Example showing a patient with fatty breast density."
 * status = #final
 * category = $observation-category#social-history "Social History"
-* code = $sct#129793001 "Mammographic breast density (finding)"
+* code = $sct#733851004 "Breast consistency (observable entity)"
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#129716005 "Almost entirely fat breast composition (finding)"  
